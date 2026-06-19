@@ -1,0 +1,22 @@
+{
+  "indices": [
+    { "name": "上证指数", "code": "sh000001", "price": 3250.45, "change": 0.85, "prevClose": 3223.18 },
+    { "name": "深证成指", "code": "sz399001", "price": 10230.56, "change": 1.25, "prevClose": 10104.25 },
+    { "name": "创业板指", "code": "sz399006", "price": 2150.78, "change": -0.32, "prevClose": 2157.68 },
+    { "name": "科创50", "code": "sh000688", "price": 985.60, "change": 2.15, "prevClose": 964.85 }
+  ],
+  "sectors": [
+    { "name": "半导体", "change": 2.35, "leader": "中芯国际" },
+    { "name": "AI", "change": 1.85, "leader": "科大讯飞" },
+    { "name": "新能源", "change": -0.65, "leader": "宁德时代" },
+    { "name": "医药", "change": 0.95, "leader": "恒瑞医药" },
+    { "name": "金融", "change": -0.42, "leader": "招商银行" },
+    { "name": "消费", "change": 0.28, "leader": "贵州茅台" }
+  ],
+  "signals": [
+    { "name": "北向资金", "value": "+45.2亿", "direction": "bullish", "updated": "2026-06-19 15:30" },
+    { "name": "两融余额", "value": "1.52万亿", "direction": "bullish", "updated": "2026-06-19" },
+    { "name": "恐慌指数", "value": "18.5", "direction": "bearish", "updated": "2026-06-19 15:00" },
+    { "name": "人民币汇率", "value": "7.245", "direction": "neutral", "updated": "2026-06-19 16:00" }
+  ]
+}
