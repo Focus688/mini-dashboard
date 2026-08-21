@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# mini-dashboard 📊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+个人 A 股投资看板 —— 大盘指数、行业板块、市场信号的**真实数据**可视化。
 
-Currently, two official plugins are available:
+数据由 [AKShare](https://akshare.akfamily.xyz/) 免费接口实时拉取，无需任何付费行情源。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ 功能
 
-## React Compiler
+| 模块 | 内容 |
+|------|------|
+| 📈 大盘指数 | 上证 / 深证 / 创业板 / 科创50 实时价、涨跌幅、昨收 |
+| 🔥 板块涨跌 | 涨跌幅最猛的 6 个行业板块（涨前3 + 跌前3）+ 领涨股 |
+| 📡 信号摘要 | 人民币汇率 / 市场宽度 / 两市成交额 / 两融余额，带多空方向标记 |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔄 数据刷新
 
-## Expanding the ESLint configuration
+看板数据存在 `public/data/market.json`，由脚本一键刷新：
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pip install akshare
+python3 scripts/refresh-data.py
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+刷新后重新构建部署即可看到最新行情。可配合 cron / GitHub Actions 每日自动刷新。
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 数据源（均为免费接口）
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| 数据 | 接口 |
+|------|------|
+| 指数实时价 | 新浪 `stock_zh_index_spot_sina` |
+| 行业板块 | 同花顺 `stock_board_industry_summary_ths` |
+| 人民币汇率 | `fx_spot_quote` |
+| 市场宽度 | 新浪全市场快照 `stock_zh_a_spot` |
+| 两融余额 | 上交所 `stock_margin_sse` |
+
+## 🚀 本地运行
+
+```bash
+npm install
+npm run dev
 ```
+
+## 💻 技术栈
+
+- React 19 + TypeScript
+- Vite 6
+- Tailwind CSS（暗色主题）
+
+## ⚠️ 免责声明
+
+本项目仅作行情展示与个人研究用途，**不构成任何投资建议**。数据存在延迟，请以交易所官方数据为准。
+
+## License
+
+MIT
