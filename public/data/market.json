@@ -1,22 +1,91 @@
 {
   "indices": [
-    { "name": "上证指数", "code": "sh000001", "price": 3250.45, "change": 0.85, "prevClose": 3223.18 },
-    { "name": "深证成指", "code": "sz399001", "price": 10230.56, "change": 1.25, "prevClose": 10104.25 },
-    { "name": "创业板指", "code": "sz399006", "price": 2150.78, "change": -0.32, "prevClose": 2157.68 },
-    { "name": "科创50", "code": "sh000688", "price": 985.60, "change": 2.15, "prevClose": 964.85 }
+    {
+      "name": "上证指数",
+      "code": "sh000001",
+      "price": 3905.2026,
+      "change": 0.038,
+      "prevClose": 3903.721
+    },
+    {
+      "name": "深证成指",
+      "code": "sz399001",
+      "price": 14094.168,
+      "change": 0.869,
+      "prevClose": 13972.78
+    },
+    {
+      "name": "创业板指",
+      "code": "sz399006",
+      "price": 3545.577,
+      "change": 1.43,
+      "prevClose": 3495.589
+    },
+    {
+      "name": "科创50",
+      "code": "sh000688",
+      "price": 1653.5551,
+      "change": 0.035,
+      "prevClose": 1652.9721
+    }
   ],
   "sectors": [
-    { "name": "半导体", "change": 2.35, "leader": "中芯国际" },
-    { "name": "AI", "change": 1.85, "leader": "科大讯飞" },
-    { "name": "新能源", "change": -0.65, "leader": "宁德时代" },
-    { "name": "医药", "change": 0.95, "leader": "恒瑞医药" },
-    { "name": "金融", "change": -0.42, "leader": "招商银行" },
-    { "name": "消费", "change": 0.28, "leader": "贵州茅台" }
+    {
+      "name": "贵金属",
+      "change": 5.34,
+      "leader": "湖南白银"
+    },
+    {
+      "name": "能源金属",
+      "change": 4.51,
+      "leader": "*ST威领"
+    },
+    {
+      "name": "工业金属",
+      "change": 2.65,
+      "leader": "盛达资源"
+    },
+    {
+      "name": "化学制药",
+      "change": -3.66,
+      "leader": "北陆药业"
+    },
+    {
+      "name": "医疗服务",
+      "change": -3.87,
+      "leader": "贝瑞基因"
+    },
+    {
+      "name": "种植业与林业",
+      "change": -4.27,
+      "leader": "丰林集团"
+    }
   ],
   "signals": [
-    { "name": "北向资金", "value": "+45.2亿", "direction": "bullish", "updated": "2026-06-19 15:30" },
-    { "name": "两融余额", "value": "1.52万亿", "direction": "bullish", "updated": "2026-06-19" },
-    { "name": "恐慌指数", "value": "18.5", "direction": "bearish", "updated": "2026-06-19 15:00" },
-    { "name": "人民币汇率", "value": "7.245", "direction": "neutral", "updated": "2026-06-19 16:00" }
-  ]
+    {
+      "name": "人民币汇率 USD/CNY",
+      "value": "6.7205",
+      "direction": "bullish",
+      "updated": "2026-08-21 19:16"
+    },
+    {
+      "name": "市场宽度",
+      "value": "2505涨 / 2861跌",
+      "direction": "bearish",
+      "updated": "2026-08-21 19:16"
+    },
+    {
+      "name": "两市成交额",
+      "value": "1.88万亿",
+      "direction": "bullish",
+      "updated": "2026-08-21 19:16"
+    },
+    {
+      "name": "两融余额(沪)",
+      "value": "1.38万亿",
+      "direction": "neutral",
+      "updated": "20260722"
+    }
+  ],
+  "generatedAt": "2026-08-21 19:16:58"
 }
