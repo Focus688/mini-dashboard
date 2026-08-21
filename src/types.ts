@@ -23,4 +23,5 @@ export interface MarketData {
   indices: Index[];
   sectors: Sector[];
   signals: Signal[];
+  generatedAt?: string;
 }
