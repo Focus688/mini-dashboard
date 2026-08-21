@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react';
-import type { MarketData } from './types';
+import type { StrategyData } from './types';
 import Header from './components/Header';
 import MarketIndices from './components/MarketIndices';
-import SectorMovers from './components/SectorMovers';
-import SignalSummary from './components/SignalSummary';
+import QlibPicks from './components/QlibPicks';
+import CTASignal from './components/CTASignal';
+import FusionRank from './components/FusionRank';
 
 function App() {
-  const [data, setData] = useState<MarketData | null>(null);
+  const [data, setData] = useState<StrategyData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('./data/market.json')
+    fetch('./data/strategy.json')
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
       })
-      .then((json: MarketData) => {
+      .then((json: StrategyData) => {
         setData(json);
         setLoading(false);
       })
@@ -46,14 +47,13 @@ function App() {
     <div className="min-h-screen bg-[#0f0f1a]">
       <Header />
       <main className="max-w-6xl mx-auto px-4 pb-8 space-y-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <MarketIndices indices={data.indices} />
-          <SectorMovers sectors={data.sectors} />
-        </div>
-        <SignalSummary signals={data.signals} />
+        <MarketIndices indices={data.indices} />
+        {data.qlib && <QlibPicks data={data.qlib} />}
+        {data.cta && <CTASignal data={data.cta} />}
+        {data.fusion && <FusionRank data={data.fusion} />}
       </main>
       <footer className="text-center py-4 text-gray-600 text-xs border-t border-[#1a1a2e]">
-        数据来源 AKShare 实时行情 · 更新于 {data.generatedAt ?? '—'} · 仅供研究参考，不构成投资建议
+        策略信号来自 Qlib / CTA / 五源融合引擎 · 更新于 {data.generatedAt ?? '—'} · 仅供研究参考，不构成投资建议
       </footer>
     </div>
   );

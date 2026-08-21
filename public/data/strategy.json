@@ -1,0 +1,350 @@
+{
+  "generatedAt": "2026-08-21 19:39:52",
+  "indices": [
+    {
+      "name": "上证指数",
+      "code": "sh000001",
+      "price": 3905.2026,
+      "change": 0.038,
+      "prevClose": 3903.721
+    },
+    {
+      "name": "深证成指",
+      "code": "sz399001",
+      "price": 14094.168,
+      "change": 0.869,
+      "prevClose": 13972.78
+    },
+    {
+      "name": "创业板指",
+      "code": "sz399006",
+      "price": 3545.577,
+      "change": 1.43,
+      "prevClose": 3495.589
+    },
+    {
+      "name": "科创50",
+      "code": "sh000688",
+      "price": 1653.5551,
+      "change": 0.035,
+      "prevClose": 1652.9721
+    }
+  ],
+  "qlib": {
+    "date": "2026-08-10",
+    "top": [
+      {
+        "name": "兆易创新",
+        "code": "SH603986",
+        "score": 0.018,
+        "reason": "波动强(+2.8),形态比率强(+1.8)",
+        "roe": 6.1,
+        "profit_growth": 522.8
+      },
+      {
+        "name": "生益科技",
+        "code": "SH600183",
+        "score": 0.0165,
+        "reason": "波动强(+2.7),动量强(+1.6)",
+        "roe": 6.7,
+        "profit_growth": 105.5
+      },
+      {
+        "name": "中国巨石",
+        "code": "SH600176",
+        "score": 0.0156,
+        "reason": "波动强(+3.0),形态比率强(+1.4)",
+        "roe": 4.0,
+        "profit_growth": 73.5
+      },
+      {
+        "name": "用友网络",
+        "code": "SH600588",
+        "score": 0.0133,
+        "reason": "趋势强(+1.7),动量强(+1.1)",
+        "roe": -10.3,
+        "profit_growth": 1.8
+      },
+      {
+        "name": "长电科技",
+        "code": "SH600584",
+        "score": 0.0118,
+        "reason": "波动强(+2.6),形态比率强(+1.0)",
+        "roe": 1.0,
+        "profit_growth": 42.7
+      },
+      {
+        "name": "中天科技",
+        "code": "SH600522",
+        "score": 0.0092,
+        "reason": "波动强(+2.2),趋势弱(-1.2)",
+        "roe": 2.4,
+        "profit_growth": 46.4
+      },
+      {
+        "name": "兖矿能源",
+        "code": "SH600188",
+        "score": 0.0083,
+        "reason": "波动强(+1.2),动量强(+1.2)",
+        "roe": 3.8,
+        "profit_growth": null
+      },
+      {
+        "name": "恒力石化",
+        "code": "SH600346",
+        "score": 0.0082,
+        "reason": "趋势强(+1.0),动量强(+1.0)",
+        "roe": 5.7,
+        "profit_growth": 90.7
+      },
+      {
+        "name": "江西铜业",
+        "code": "SH600362",
+        "score": 0.008,
+        "reason": "趋势强(+1.2),动量强(+1.1)",
+        "roe": 3.4,
+        "profit_growth": 44.3
+      },
+      {
+        "name": "中远海能",
+        "code": "SH600026",
+        "score": 0.0072,
+        "reason": "波动强(+0.6),趋势强(+0.5)",
+        "roe": 4.6,
+        "profit_growth": 206.7
+      }
+    ],
+    "bottom": [
+      {
+        "name": "宁沪高速",
+        "code": "SH600377",
+        "score": -0.0002,
+        "reason": "波动弱(-0.7),动量弱(-0.6)",
+        "roe": 3.2,
+        "profit_growth": 12.8
+      },
+      {
+        "name": "中国联通",
+        "code": "SH600050",
+        "score": -0.0002,
+        "reason": "波动弱(-0.7),动量弱(-0.6)",
+        "roe": 1.2,
+        "profit_growth": -18.0
+      },
+      {
+        "name": "中信证券",
+        "code": "SH600030",
+        "score": -0.0002,
+        "reason": "波动弱(-1.0),量能弱(-0.8)",
+        "roe": 3.5,
+        "profit_growth": 54.6
+      },
+      {
+        "name": "华电国际",
+        "code": "SH600027",
+        "score": -0.0003,
+        "reason": "波动弱(-0.8),动量弱(-0.6)",
+        "roe": 3.4,
+        "profit_growth": -9.9
+      },
+      {
+        "name": "三峡能源",
+        "code": "SH600905",
+        "score": -0.0003,
+        "reason": "波动弱(-0.8),趋势弱(-0.7)",
+        "roe": 1.2,
+        "profit_growth": -57.5
+      },
+      {
+        "name": "四川路桥",
+        "code": "SH600039",
+        "score": -0.0005,
+        "reason": "动量弱(-0.4),形态比率强(+0.4)",
+        "roe": 2.8,
+        "profit_growth": -15.7
+      },
+      {
+        "name": "长江电力",
+        "code": "SH600900",
+        "score": -0.0006,
+        "reason": "波动弱(-0.6),动量弱(-0.5)",
+        "roe": 3.0,
+        "profit_growth": 30.5
+      },
+      {
+        "name": "国投资本",
+        "code": "SH600061",
+        "score": -0.0006,
+        "reason": "波动弱(-0.8),量能弱(-0.8)",
+        "roe": 1.4,
+        "profit_growth": 12.6
+      },
+      {
+        "name": "宝钢股份",
+        "code": "SH600019",
+        "score": -0.0007,
+        "reason": "波动弱(-0.7),动量弱(-0.6)",
+        "roe": 1.1,
+        "profit_growth": -8.6
+      },
+      {
+        "name": "瑞芯微",
+        "code": "SH603893",
+        "score": -0.0007,
+        "reason": "波动强(+1.3),形态比率强(+0.7)",
+        "roe": 7.2,
+        "profit_growth": 57.1
+      }
+    ]
+  },
+  "cta": {
+    "signal": -0.046,
+    "level": "⚪ 趋势震荡",
+    "sectors": [
+      {
+        "name": "股指",
+        "signal": -0.22
+      },
+      {
+        "name": "贵金属",
+        "signal": 0.07
+      },
+      {
+        "name": "工业金属",
+        "signal": 0.35
+      },
+      {
+        "name": "黑色系",
+        "signal": -0.95
+      },
+      {
+        "name": "能源",
+        "signal": 0.06
+      },
+      {
+        "name": "能源化工",
+        "signal": -0.04
+      },
+      {
+        "name": "农产品",
+        "signal": 0.67
+      }
+    ],
+    "futures": [
+      {
+        "name": "铁矿石",
+        "sector": "黑色系",
+        "signal": -1.0,
+        "ret_60": -9.53
+      },
+      {
+        "name": "豆粕",
+        "sector": "农产品",
+        "signal": 1.0,
+        "ret_60": 9.96
+      },
+      {
+        "name": "螺纹钢",
+        "sector": "黑色系",
+        "signal": -0.9,
+        "ret_60": -3.56
+      },
+      {
+        "name": "铜",
+        "sector": "工业金属",
+        "signal": 0.9,
+        "ret_60": 2.41
+      },
+      {
+        "name": "棕榈油",
+        "sector": "农产品",
+        "signal": 0.64,
+        "ret_60": 6.76
+      },
+      {
+        "name": "锡",
+        "sector": "工业金属",
+        "signal": 0.51,
+        "ret_60": 1.23
+      },
+      {
+        "name": "棉花",
+        "sector": "农产品",
+        "signal": 0.36,
+        "ret_60": 6.17
+      },
+      {
+        "name": "铝",
+        "sector": "工业金属",
+        "signal": -0.35,
+        "ret_60": -3.63
+      }
+    ]
+  },
+  "fusion": {
+    "week": "2026-W34",
+    "date": "2026-08-21",
+    "ranked": [
+      {
+        "name": "中国巨石",
+        "code": "SH600176",
+        "score": 0.4
+      },
+      {
+        "name": "中国动力",
+        "code": "SH600482",
+        "score": 0.3329
+      },
+      {
+        "name": "士兰微",
+        "code": "SH600460",
+        "score": 0.3281
+      },
+      {
+        "name": "生益科技",
+        "code": "SH600183",
+        "score": 0.3162
+      },
+      {
+        "name": "中韩半导体ETF联接A",
+        "code": "019454",
+        "score": 0.3
+      },
+      {
+        "name": "国泰半导体设备ETF联接A",
+        "code": "019632",
+        "score": 0.3
+      },
+      {
+        "name": "华夏科创50ETF联接A",
+        "code": "011612",
+        "score": 0.3
+      },
+      {
+        "name": "博时全指电力ETF联接A",
+        "code": "017481",
+        "score": 0.3
+      },
+      {
+        "name": "华夏沪深300ETF联接A",
+        "code": "000051",
+        "score": 0.3
+      },
+      {
+        "name": "华泰柏瑞红利低波ETF联接A",
+        "code": "007466",
+        "score": 0.3
+      },
+      {
+        "name": "华宝中证A500ETF联接A",
+        "code": "019510",
+        "score": 0.3
+      },
+      {
+        "name": "中金黄金",
+        "code": "SH600489",
+        "score": 0.2611
+      }
+    ]
+  }
+}

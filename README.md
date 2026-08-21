@@ -1,37 +1,32 @@
 # mini-dashboard 📊
 
-个人 A 股投资看板 —— 大盘指数、行业板块、市场信号的**真实数据**可视化。
+个人 A 股投资策略看板 —— 把三个量化引擎的信号集中到一块可视化。
 
-数据由 [AKShare](https://akshare.akfamily.xyz/) 免费接口实时拉取，无需任何付费行情源。
-
-## ✨ 功能
-
-| 模块 | 内容 |
+| 引擎 | 信号 |
 |------|------|
-| 📈 大盘指数 | 上证 / 深证 / 创业板 / 科创50 实时价、涨跌幅、昨收 |
-| 🔥 板块涨跌 | 涨跌幅最猛的 6 个行业板块（涨前3 + 跌前3）+ 领涨股 |
-| 📡 信号摘要 | 人民币汇率 / 市场宽度 / 两市成交额 / 两融余额，带多空方向标记 |
+| 🎯 Qlib 多空选股 | LGB 多因子模型，沪深300 池 Top10 多头 + Bottom 空头（含 ROE/利润增速/因子归因） |
+| 📉 CTA 趋势跟踪 | 15 个期货品种趋势 + 7 大板块方向，综合多空信号 |
+| 🧠 五源融合榜单 | Qlib + CTA + Vibe + 基金池 + 组合引擎归一化融合排名 |
 
 ## 🔄 数据刷新
 
-看板数据存在 `public/data/market.json`，由脚本一键刷新：
+策略信号来自本机三个引擎的每日输出，由脚本一键整合：
 
 ```bash
 pip install akshare
-python3 scripts/refresh-data.py
+python3 scripts/refresh-strategy.py
 ```
 
-刷新后重新构建部署即可看到最新行情。可配合 cron / GitHub Actions 每日自动刷新。
+脚本读取：
 
-### 数据源（均为免费接口）
-
-| 数据 | 接口 |
+| 数据 | 路径 |
 |------|------|
-| 指数实时价 | 新浪 `stock_zh_index_spot_sina` |
-| 行业板块 | 同花顺 `stock_board_industry_summary_ths` |
-| 人民币汇率 | `fx_spot_quote` |
-| 市场宽度 | 新浪全市场快照 `stock_zh_a_spot` |
-| 两融余额 | 上交所 `stock_margin_sse` |
+| Qlib 多空选股 | `~/.hermes/output/qlib-picks/daily_picks.json` |
+| CTA 趋势信号 | `~/.hermes/output/cta/cta_signals.json` |
+| 五源融合榜单 | `~/.hermes/output/fusion/history.json` |
+| 大盘指数 | AKShare 新浪实时行情 |
+
+刷新后重新构建部署即可。
 
 ## 🚀 本地运行
 
@@ -48,7 +43,7 @@ npm run dev
 
 ## ⚠️ 免责声明
 
-本项目仅作行情展示与个人研究用途，**不构成任何投资建议**。数据存在延迟，请以交易所官方数据为准。
+本项目仅作个人策略信号展示与研究用途，**不构成任何投资建议**。信号来自量化模型，存在误差与失效风险，请自行判断。
 
 ## License
 
