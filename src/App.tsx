@@ -53,7 +53,7 @@ function App() {
         <SignalSummary signals={data.signals} />
       </main>
       <footer className="text-center py-4 text-gray-600 text-xs border-t border-[#1a1a2e]">
-        数据仅作演示用途 · 模拟数据来自 market.json
+        数据来源 AKShare 实时行情 · 更新于 {data.generatedAt ?? '—'} · 仅供研究参考，不构成投资建议
       </footer>
     </div>
   );
